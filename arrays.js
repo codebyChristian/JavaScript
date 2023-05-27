@@ -65,3 +65,45 @@ console.log(high);
 
 
 // Criar um array com números reais e depois separar somentes os números inteiros
+
+
+// SPLICE: ele corta o array, splice(2) -> isso signica que apartir do 2 será apagado
+
+var arr2 = [1,2,3,4,5,6,7];
+arr2.splice(1,2);         // Vai tirar a posição 1, e depois da virgula determina a quant.. que vai tirar
+
+console.log(arr2);
+
+
+
+var nomes = ["Maria", "João", "Lucas", "Pedro"];
+
+var novos = nomes.splice(1,2,"Luis", "Ronaldo"); 
+console.log(nomes);
+
+var pais = ["Brazil", "Argentina", "Colombia"];
+
+pais.unshift("Uruguay");     // Cria um elemento no início
+console.log(pais);
+
+// SLICE
+
+var person = ["Tiru", "Vale Gás", "Hello", "World"];
+var person2 = person.slice(1,3);
+
+console.log(person);
+
+console.log(person2);
+
+// Concatenação
+
+var play = ["Too", "Me", "You"];
+
+var play2 = ["Eu", "Você", "Nós"];
+
+var time = play.concat(play2);
+
+console.log(time);
+
+// Divide todos os meses do ano em trimestre
+
