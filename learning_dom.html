@@ -1,0 +1,42 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elemento do DOM exemplo 1</title>
+    <style>
+        a {
+            text-decoration: none;
+            color: rgb(0, 213, 7);
+            font-size: 3.0em;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: red;
+            font-size: 2.2em;
+        }
+    </style>
+</head>
+<body>
+    <p>Acesse o outro <a href="learning_dom_02.html" target="_self" rel="next ">exercício</a></p>
+</body>
+<script>
+    //window.alert("Hello world")
+    //window.confirm("Você quer confirmar a compra.")
+    //window.prompt("Qual a sua idade?")
+    // Atividade
+    var nome = window.prompt("Digite seu nome?")
+
+    var sobrenome = window.prompt("Digite seu sobrenome?")
+
+    var completo = nome + " " + sobrenome;
+    window.alert("O seu nome é: " + nome.toUpperCase() + " " + sobrenome.toUpperCase() );
+    
+</script>
+</html>
+
+
+
