@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acessando DOM</title>
+</head>
+<body>
+    <h1>Acesse a próxima <a href="learning_dom_05.html" target="_self" rel="next">página</a></h1>
+    <h1>Utilizando seletor do DOM</h1>
+    <ul>
+        <li>Java</li>
+        <li>Python</li>
+        <li>NodeJS</li>
+    </ul>
+    <div id="conteudo" name="divconteudo" class="mensagem">
+
+    </div>
+
+    <div name="divconteudo" class="mensagem">
+
+    </div>
+
+    <div name="divconteudo" class="mensagem">
+
+    </div>
+
+    <span id="novospan" class="novo">
+        There's nothing there.
+    </span>
+
+    <div class="mensagem">
+
+    </div>
+</body>
+<script>
+// Acessando pela tag    
+    elemento0 = document.getElementsByTagName("li")[0];
+    elemento0.style.color = "Blue";
+
+    elemento1 = document.getElementsByTagName("li")[1];
+    elemento1.style.background = "Red";
+
+    elemento2 = document.getElementsByTagName("li")[2]
+    elemento2.innerText = "SpringBoot";                   // Alterar o nome da propriedade
+// Pegar a div pelo id
+    elementDiv = document.getElementById("conteudo");
+    elementDiv.innerHTML = "<p> Testando parágrafo </p>"        // Inserindo texto pelo DO
+// Buscando pelo nome
+    elementoDivName = document.getElementsByName("divconteudo")[1];  // Há duas divs com o mesmo nome
+    elementoDivName.style.color = "blue";
+    elementoDivName.innerText = "Colocando um texto"
+// Acessar pela classe
+    elementoDivClass = document.getElementsByClassName("mensagem")[2];
+    elementoDivClass.innerHTML = "<p> Testando parágrafo na div 2 </p>" 
+// Acessar pelo CSS 
+    elementoSpanClass = document.querySelector("span.novo");             // Assim acessa pelo CSS 
+    elementoSpanClass.style.color = "yellow";
+// Acessar todos as tags com  a mesma classe
+    elementSeletor = document.querySelectorAll(".mensagem")[3];
+    elementSeletor.innerHTML = "<p> Texto Salvo </p>"
+
+</script>
+</html>
