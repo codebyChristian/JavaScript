@@ -1,0 +1,46 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 09</title>
+</head>
+<body>
+
+    <form action="" name="formCadastro" onsubmit="validarForm()">   
+         // onsubmit faz o tratamento em outra página, mas há com brecar isso, está lá em baixo como se faz
+
+        <label for="">Email</label>
+        <input type="email" id="email">
+
+        <label for="">Nome</label>
+        <input type="text" id="nome">
+
+        <button type="submit" >Salvar</button>
+    </form>
+
+    
+    
+</body>
+<script>
+   
+   function validarForm() {
+    var nomePessoa = document.forms["formCadastro"]["nome"].value;   
+    if  (nomePessoa == "") {
+        alert("Obrigatório digitar o nome!")
+        event.preventDefault();           // Faz com que fica na mesma página
+    } else {
+        alert("Olá, " + nomePessoa);
+        event.preventDefault();           
+    }
+        
+   }
+
+
+</script>
+</html>

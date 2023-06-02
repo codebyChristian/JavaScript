@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Futebol</title>
+</head>
+<body>
+
+    <ul class="listatime">
+        <li><a href="learning_dom_eventos_07.html" target="_self" rel="next">--Eventos--</a></li>
+    </ul>
+    
+</body>
+<script>
+// Arrays com vários times
+    times = ["Real Madrid", "Barcelona", "Juventos", "Atlético", "Vasco", "Bahia"]
+
+    var listadetimes = document.querySelector("ul.listatime");
+    for (var i = 0; i < times.length; i++) {
+        var time = times[i];
+        var listItem = document.createElement("li");
+        listItem.innerText = time;
+        listItem.style.border = "1px solid blue";
+        listadetimes.appendChild(listItem);
+    }
+
+
+</script>
+</html>

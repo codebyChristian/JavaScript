@@ -1,0 +1,37 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+</head>
+<body>
+    <p>Clique no botão a seguir e veja o resultado!</p>
+    
+    <form action="evento">
+        <input type="button" onclick="exemplo()" value="apresentar">
+    </form>
+
+    <h1 id="exemplo" onmouseover="passarMousePorCima()" onmouseout="tirarMouse()">Hello</h1>
+    <h2><a href="learning_dom_form_08.html" target="_self" rel="next">Desafio 08</a></h2>
+
+</body>
+<script>
+    function exemplo() {
+        alert("Zé da Manga!");
+    }
+
+    function passarMousePorCima() {
+        document.getElementById("exemplo").innerHTML = "Evento com mouse over!";     // sem variavel - shorthand -
+        
+    }
+
+    function tirarMouse() {
+        document.getElementById("exemplo").innerHTML = "Evento com mouse out!";
+    }
+
+</script>
+</html>

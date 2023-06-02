@@ -1,0 +1,31 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo DOM</title>
+</head>
+<body>
+
+    <ul id="lista">
+        <li>Wooow</li>
+        <li><a href="lista_de_futebol_dom.html" target="_self" rel="next">Desafio</a></li>
+    </ul>
+
+</body>
+<script>
+// Creiar uma div dentro do body
+    var elemento = document.createElement("div");
+    elemento.innerText = "Inserindo texto na div criada pelo DOM";
+    elemento.style.backgroundColor = "lightgreen";
+    document.body.append(elemento);              // Coloca a div dentro do body
+// Adicionando a ul listas > li
+    var lista = document.getElementById("lista");
+    var li = document.createElement("li");
+    li.textContent = "Do your best!";           // Adiciona texto a lista
+    lista.appendChild(li);                      // Adiciona um filho na ul
+
+ </script>
+</html>

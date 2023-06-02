@@ -1,0 +1,33 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form 08</title>
+</head>
+<body>
+
+    <form action="">
+
+        <label for="">Email</label>
+        <input type="email" id="email">
+
+        <label for="">Nome</label>
+        <input type="text" id="nome">
+
+        <button type="submit" onclick="novoItem()">Salvar</button>
+    </form>
+
+    <h1><a href="learning_dom_form_09.html" target="_self" rel="next">Exercício 09</a></h1>
+    
+</body>
+<script>
+    function novoItem() {
+        var campoNome = document.getElementById("nome");
+        alert("Seu nome é: " + campoNome.value);
+    }
+</script>
+</html>
