@@ -1,0 +1,58 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React</title>
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+</head>
+<body>
+    <div id="app">
+
+    </div>
+    <!-- <h1>Hello World!</h1> -->
+     <!-- Vamos criar dentro da tag h1 um span e um strong -->
+
+    <script>
+
+        /* Criar o span e strong dentro da tag h1 */
+        function Hello(props) {     // props é um objeto que recebe o nome Chris da linha 53*
+            return(
+                React.createElement('h1', {id: 'titilo', className: 'cabecalho'},       // passando atributos para as tags
+                 React.createElement('span', {}, props.texto),    // span é filho de h1
+                 React.createElement('strong', {}, props.label),    // strong é irmão de span
+                 '!!!!!!!!!!!'               // Aqui passa o texto para aparecer após o conteúdo
+                 )     
+            )
+        } 
+
+
+
+        /* Usando função */
+        // function Hello() {
+        //     return (
+        //         React.createElement('h1', {}, 'Olá Mundo!')
+        //     )
+        // }
+
+        /* Usando class */
+
+        // class Hello extends React.Component {
+        //     render()  {
+        //         return (
+        //             React.createElement('h1', {}, 'Olá, Mundo')
+        //     )
+        //    }
+            
+        // }
+            
+        ReactDOM.render(
+            React.createElement(Hello, {label: 'Chris!', texto: 'Bom demaizze'}),
+            document.querySelector('#app')
+        );
+    </script>
+</body>
+</html>
