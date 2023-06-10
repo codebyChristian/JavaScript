@@ -15,14 +15,13 @@ function Titulo() {
 
 }
 
-function MyButton() {
-
+function MyButton(props) {
+  const handleClick = () => {
+    console.log('Clicou')
+  };
   const label = 'Aperte na mosca';
   return(
-    <button type="button"> Zé da mangaaa</button>,
-    <button type="button">{label}</button>
-
-    
+    <button onClick={handleClick} type="button">{label}</button>
 
   )
 }
@@ -79,7 +78,8 @@ function App() {
 
   return (
     <div className="App">
-      <Titulo />         
+      <Titulo />   
+      <MyButton />      
       <p>Para chamar uma função usa-se uma tag: com o nome dela.</p>
       <h2>Vamos lá!</h2>
       <p>Para criação do projeto, seque a mesma lógica do HTML, criando tags e colocando o conteúdo nelas.</p>

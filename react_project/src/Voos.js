@@ -57,14 +57,14 @@ function ItemVooDetails(props) {
 }
 
 
-function ItemVoo(props) {
+function ItemVoo({title, children}) {
     return(
         <div className="voo">
             <header>
-                <h3>{props.title}</h3>
+                <h3>{title}</h3>
             </header>
             <div className="voo-details">
-                <ItemVooDetails details={props.details} />
+                {children}
             </div>
         </div>
         
@@ -75,7 +75,9 @@ function ItemVoo(props) {
     return(
         <div className="voos">
             {voosDesponiveis.map(voo => (
-                <ItemVoo key={voo.id} title={voo.title} details={voo.details} />
+                <ItemVoo key={voo.id} title={voo.title}>
+                    <ItemVooDetails details={voo.details} />         //Isso é filho
+                </ItemVoo>
             ))}
         </div>
     )
