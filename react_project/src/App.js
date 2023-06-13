@@ -1,6 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import Voos from './Voos';
+import { AssentosOnibus } from './AssentoOnibus';
 
 
 
@@ -78,7 +79,8 @@ function App() {
 
   return (
     <div className="App">
-      <Titulo />   
+      <Titulo /> 
+      < AssentosOnibus />  
       <MyButton />      
       <p>Para chamar uma função usa-se uma tag: com o nome dela.</p>
       <h2>Vamos lá!</h2>
